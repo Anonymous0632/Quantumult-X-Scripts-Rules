@@ -9,7 +9,7 @@
 
 # 具体操作（如何使用QX懒人配置文件）
 
-机场需要你自己进行准备，然后去设置里配置MITM证书，具体过程参照 @Shawn 提供的 [Quantumult X 不完全指南](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf)这里不再赘述。
+机场需要自己进行准备，然后去设置里配置MITM证书，具体过程参照 @Shawn 提供的 [Quantumult X 不完全指南](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf)这里不再赘述。
 
 ## 下载预配置文件
 > 1. 下载 quantumult.conf 预配置文件链接至设备自带文件管理系统（建议使用Safari进行）
@@ -19,12 +19,23 @@
 > 5. 右上角对勾确认，届时 QuantumultX 将把除了节点和MITM配置证书的全部配置加载出来。
 
 ### `🌐 公共 DNS 推荐`（已包含在配置文件里）
-
+    
     - https://doh.pub/dns-query
     - 119.29.29.29 [腾讯DnsPod+]
     - 182.254.116.116
     - 223.5.5.5 [阿里云公共DNS]
     - 223.6.6.6
+    - doq-server：quic://dns.alidns.com:853, 
+    - quic://223.5.5.5:853, 
+    - quic://223.6.6.6:853,
+    - quic://dns.adguard.com,
+    - quic://a.passcloud.xyz:784
+    - IPV6-server:
+    - server=[2400:3200::1]
+    - server=[2400:3200:baba::1]
+    - server=[2402:4e00::]
+    - server=[2606:4700:4700::1111]
+    - server=[2606:4700:4700::1001]
 	
 #解析器作者 @XIAO_KOP 
 resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
@@ -34,10 +45,10 @@ resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/maste
 - GeoIP 规则已经可以解决绝大多数的境内网站直连。
 - 而剩下未能被匹配的规则使用 Final 即可。
 - 在很多常用的软件上也可以选择国家和地区，固定国家ip的登录对于风控严格的软件账户是非常必要的。
-- 在Boxjs上可以自主管理脚本，本配置集成了薯条* [Virgil Clyne](https://github.com/VirgilClyne) 
+- 在Boxjs上可以自主管理脚本，本配置集成了薯条 [Virgil Clyne](https://github.com/VirgilClyne) 
 的iRingo https://github.com/VirgilClyne/iRingo 以及
 DualSubs https://github.com/DualSubs
-- BoxJs需要自己手动进行配置，具体配置过程参见* [Chavy](https://github.com/chavyleung)
+- BoxJs需要自己手动进行配置，具体配置过程参见 [Chavy](https://github.com/chavyleung)
 的https://docs.boxjs.app/ 才可以正常使使用。
 
 ## *致谢（如有发现有疏漏请立即联系本人）*
@@ -71,8 +82,8 @@ DualSubs https://github.com/DualSubs
 * [ConnersHua](https://github.com/DivineEngine/Profiles/tree/master)
 * [mieqq](https://github.com/mieqq/mieqq)
 * [Yachen Liu](https://github.com/Blankwonder)
+* [NobyDa](https://github.com/NobyDa)
 * [maicoo](https://github.com/blankmagic/surge)
-
 ## 排名不分先后。
 
 ## 感谢各位大佬的规则分享以及辛勤维护！
