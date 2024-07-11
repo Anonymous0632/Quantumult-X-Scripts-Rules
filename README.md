@@ -37,7 +37,9 @@
     - server=[2606:4700:4700::1111]
     - server=[2606:4700:4700::1001]
 	
-# 解析器作者[KOP-XIAO]
+# Qantumult X解析器及作者
+年轻人的最后一款资源解析器。
+[KOP-XIAO](https://github.com/KOP-XIAO)
 resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
 
 **说明**
