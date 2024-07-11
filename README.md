@@ -1,6 +1,6 @@
 ## Preview
 
-![preview](./quantumult配置示例.jpg)
+![preview](./quantumult配置示例.png)
 
 # Quantumult-X-
 自用conf配置文件，基本已经完善了国内外分流、去广告和解锁功能，规则80%来源于其他开源项目，剩下20%为本人完善。
