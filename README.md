@@ -2,6 +2,8 @@
 
 ![preview](./quantumult配置示例.png)
 
+[![Anonymous0632's GitHub stats](https://github-readme-stats.vercel.app/api?username=Anonymous0632)](https://github.com/Anonymous0632/Quantumult-X-Scripts-Rules)
+
 # Quantumult-X-
 自用conf配置文件，基本已经完善了国内外分流、去广告和解锁功能，由于对于去广告的强迫症思维，该配置在去广告的功能上集成度很高。
 规则80%来源于其他开源项目，剩下20%为本人完善。在大佬的基础上加入了一些我自己的使用习惯。感谢各位大佬的付出。在此致谢。
