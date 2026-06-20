@@ -11,7 +11,7 @@
 
 ## 中文说明
 
-这是自用的 Quantumult X 配置文件，已经覆盖常用的国内外分流、广告拦截、重写、脚本任务和部分解锁场景。配置整体以日常使用稳定性和去广告完整度为主，规则大约 80% 来自其他开源项目，剩余部分结合个人使用习惯补充和调整。
+这是自用的 Quantumult X 配置文件，已经覆盖常用的国内外分流、广告拦截、重写、脚本任务和部分解锁场景。配置整体以日常使用稳定性和去广告完整度为主，去广告主规则改用本人 [Ad-Server-Lists](https://github.com/Anonymous0632/Ad-Server-Lists) 项目中融合、去重并审计筛选后的列表。
 
 如果发现规则失效、误拦截或上游资源变更，会不定期基于本地最新配置文件更新。
 
@@ -19,15 +19,15 @@
 
 | 项目 | 内容 |
 | --- | --- |
-| 最新配置文件 | [`quantumult_20260531224706.conf`](./quantumult_20260531224706.conf) |
-| 更新时间 | 2026-05-31 22:47:06 |
+| 最新配置文件 | [`quantumult_20260620115949.conf`](./quantumult_20260620115949.conf) |
+| 更新时间 | 2026-06-20 11:59:49 |
 | 本次 README 来源 | 以仓库内本地最新配置文件为准 |
 | 主要模块 | `general`、`dns`、`policy`、`filter_remote`、`filter_local`、`rewrite_remote`、`task_local`、`mitm` |
 
 ### 功能概览
 
 - 国内网站和服务优先直连，常见境外网站按规则或 GeoIP 分流。
-- 集成多个广告拦截、隐私保护和运营商劫持过滤规则。
+- 去广告主规则使用本人 Ad-Server-Lists 项目的合并去重审计列表，并保留部分可选上游过滤规则。
 - 内置常用服务策略组，包括 AI、Telegram、YouTube、Netflix、Disney+、Spotify、Twitter、PayPal、Facebook、Reddit、Discord、BiliBili、TikTok、游戏、媒体、金融、Apple 和 Microsoft 服务等。
 - DNS 配置包含 DoH3、常用公共 DNS、IPv6 DNS 以及部分国内服务的指定解析。
 - 集成部分 iRingo、DualSubs、BoxJs、去广告重写、签到任务和流媒体解锁检测脚本。
@@ -36,7 +36,7 @@
 
 1. 自行准备代理节点或机场订阅。
 2. 在 Quantumult X 中配置并信任 MITM 证书。具体步骤可参考 @Shawn 的 [Quantumult X 不完全指南](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf)。
-3. 使用 Safari 或系统文件管理下载 [`quantumult_20260531224706.conf`](./quantumult_20260531224706.conf)。
+3. 使用 Safari 或系统文件管理下载 [`quantumult_20260620115949.conf`](./quantumult_20260620115949.conf)。
 4. 打开 Quantumult X，点击右下角设置按钮。
 5. 进入「配置文件」模块，选择「导入配置」。
 6. 在文件管理器中选择下载的 `.conf` 文件。
@@ -134,7 +134,7 @@ resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/maste
 
 ## English
 
-This repository contains a personal Quantumult X configuration. It covers common domestic and international routing, ad blocking, rewrites, scheduled scripts, and selected unlock scenarios. The configuration focuses on day-to-day stability and a high level of ad-blocking coverage. Around 80% of the rules come from other open-source projects, while the rest is adjusted for personal usage.
+This repository contains a personal Quantumult X configuration. It covers common domestic and international routing, ad blocking, rewrites, scheduled scripts, and selected unlock scenarios. The configuration focuses on day-to-day stability and a high level of ad-blocking coverage. The primary ad-blocking rules now come from my [Ad-Server-Lists](https://github.com/Anonymous0632/Ad-Server-Lists) project, which merges, deduplicates, audits, and filters rules from major ad-blocking sources.
 
 The project will be updated from time to time based on the latest local configuration file in this repository.
 
@@ -142,15 +142,15 @@ The project will be updated from time to time based on the latest local configur
 
 | Item | Value |
 | --- | --- |
-| Latest config file | [`quantumult_20260531224706.conf`](./quantumult_20260531224706.conf) |
-| Updated at | 2026-05-31 22:47:06 |
+| Latest config file | [`quantumult_20260620115949.conf`](./quantumult_20260620115949.conf) |
+| Updated at | 2026-06-20 11:59:49 |
 | README source | Generated from the latest local config file in this repository |
 | Main sections | `general`, `dns`, `policy`, `filter_remote`, `filter_local`, `rewrite_remote`, `task_local`, `mitm` |
 
 ### Features
 
 - Domestic websites and services are routed directly when possible; common international services are routed by rules or GeoIP.
-- Multiple ad-blocking, privacy-protection, and carrier-hijacking filters are included.
+- The main ad-blocking rules use the merged, deduplicated, and audited list from my Ad-Server-Lists project, with selected optional upstream filters kept as supplements.
 - Built-in policy groups cover AI, Telegram, YouTube, Netflix, Disney+, Spotify, Twitter, PayPal, Facebook, Reddit, Discord, BiliBili, TikTok, gaming, media, finance, Apple, Microsoft, and more.
 - DNS settings include DoH3, common public DNS servers, IPv6 DNS servers, and domain-specific DNS routing for selected Chinese services.
 - The configuration includes selected iRingo, DualSubs, BoxJs, ad-blocking rewrites, scheduled tasks, and streaming unlock check scripts.
@@ -159,7 +159,7 @@ The project will be updated from time to time based on the latest local configur
 
 1. Prepare your own proxy nodes or airport subscription.
 2. Configure and trust the MITM certificate in Quantumult X. For the general process, see @Shawn's [Quantumult X guide](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917#bb2dce7c01114955bbdbbd222f2a5fcf).
-3. Download [`quantumult_20260531224706.conf`](./quantumult_20260531224706.conf) with Safari or the system file manager.
+3. Download [`quantumult_20260620115949.conf`](./quantumult_20260620115949.conf) with Safari or the system file manager.
 4. Open Quantumult X and tap the settings button in the bottom-right corner.
 5. Go to the "Profiles" section and choose "Import Profile".
 6. Select the downloaded `.conf` file from the file manager.
