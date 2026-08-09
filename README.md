@@ -22,7 +22,7 @@
 | 最新配置文件 | [`quantumult_20260620115949.conf`](./quantumult_20260620115949.conf) |
 | 更新时间 | 2026-06-20 11:59:49 |
 | 本次 README 来源 | 以仓库内本地最新配置文件为准 |
-| 主要模块 | `general`、`dns`、`policy`、`filter_remote`、`filter_local`、`rewrite_remote`、`task_local`、`mitm` |
+| 主要模块 | `general`、`dns`、`policy`、`server_remote`、`filter_remote`、`filter_local`、`rewrite_remote`、`task_local`、`mitm` |
 
 ### 功能概览
 
@@ -145,7 +145,7 @@ The project will be updated from time to time based on the latest local configur
 | Latest config file | [`quantumult_20260620115949.conf`](./quantumult_20260620115949.conf) |
 | Updated at | 2026-06-20 11:59:49 |
 | README source | Generated from the latest local config file in this repository |
-| Main sections | `general`, `dns`, `policy`, `filter_remote`, `filter_local`, `rewrite_remote`, `task_local`, `mitm` |
+| Main sections | `general`, `dns`, `policy`, `server_remote`, `filter_remote`, `filter_local`, `rewrite_remote`, `task_local`, `mitm` |
 
 ### Features
 
